@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:6.0
 LABEL maintainer "Ody Mbegbu <odytrice@gmail.com>"
 
 RUN apt-get update
-RUN apt-get --assume-yes install apt-transport-https python3-pip
+RUN apt-get --assume-yes install apt-transport-https python3-pip libffi-dev python3-dev
 
 RUN pip3 install jupyterlab
 
